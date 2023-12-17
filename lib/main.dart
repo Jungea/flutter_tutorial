@@ -10,16 +10,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            decoration: BoxDecoration(
+          child: SizedBox(
+            height: 200.0,
+            width: 200.0,
+            child: Container(
               color: Colors.red,
-              border: Border.all(
-                width: 16.0,
-                color: Colors.black,
-              ),
-              borderRadius: BorderRadius.circular(
-                  16.0,
-              ),
             ),
           ),
         ),
