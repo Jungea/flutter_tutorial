@@ -9,25 +9,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
+        body: SafeArea(
+          top: true,
+          bottom: true,
+          left: true,
+          right: true,
           child: Container(
-            color: Colors.black,
-            
-            child: Container(
-              color: Colors.blue,
-              margin: EdgeInsets.all(16.0),
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                
-                child: Container(
-                  color: Colors.red,
-                  width: 50.0,
-                  height: 50.0,
-                ),
-              ),
-            ),
-          )
-        ),
+            color: Colors.red,
+            height: 300.0,
+            width: 300.0,
+          ),
+        )
       ),
     );
   }
