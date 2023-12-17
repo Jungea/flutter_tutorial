@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 void main() {
   // runApp(MyApp());
-  // runApp(FlexibleWidgetExample());
-  runApp(ExpeandedWidgetExample());
+  runApp(StackWidgetExample());
 }
 
-class FlexibleWidgetExample extends StatelessWidget {
+class StackWidgetExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,47 +13,22 @@ class FlexibleWidgetExample extends StatelessWidget {
         body: SizedBox(
 
           width: double.infinity,
-          child: Column(
+          child: Stack(
             children: [
-              Flexible(
-                flex: 3,
-                child: Container(
-                  color: Colors.blue,
-                ),
+              Container(
+                height: 300.0,
+                width: 300.0,
+                color: Colors.red,
               ),
-              Flexible(
-                flex: 1,
-                child: Container(
-                  color: Colors.red,
-                ),
+              Container(
+                height: 250.0,
+                width: 250.0,
+                color: Colors.yellow,
               ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ExpeandedWidgetExample extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SizedBox(
-
-          width: double.infinity,
-          child: Column(
-            children: [
-              Expanded(
-                child: Container(
-                  color: Colors.blue,
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.red,
-                ),
+              Container(
+                height: 200.0,
+                width: 200.0,
+                color: Colors.blue,
               ),
             ],
           ),
