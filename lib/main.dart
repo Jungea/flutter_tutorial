@@ -1,32 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/screen/u_and_i.dart';
+import 'package:flutter_tutorial/const/colors.dart';
+import 'package:flutter_tutorial/screen/random_dice.dart';
 
 void main() {
   runApp(MaterialApp(
     theme: ThemeData(
-      fontFamily: 'sunflower',
-      textTheme: TextTheme(
-        displayLarge: TextStyle(
-          color: Colors.white,
-          fontSize: 80.0,
-          fontWeight: FontWeight.w700,
-          fontFamily: 'parisienne',
-        ),
-        displayMedium: TextStyle(
-          color: Colors.white,
-          fontSize: 50.0,
-          fontWeight: FontWeight.w700,
-        ),
-        bodyLarge: TextStyle(
-          color: Colors.white,
-          fontSize: 30.0,
-        ),
-        bodyMedium: TextStyle(
-          color: Colors.white,
-          fontSize: 20.0,
-        ),
-      )
+      scaffoldBackgroundColor: backgroundColor,
+      sliderTheme: SliderThemeData(
+        thumbColor: primaryColor,
+        activeTrackColor: primaryColor,
+        inactiveTrackColor: primaryColor.withOpacity(0.3),
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: primaryColor,
+        unselectedItemColor: secondaryColor,
+        backgroundColor: backgroundColor,
+      ),
     ),
-    home: UAndI(),
+    home: RandomDice(),
   ));
 }
